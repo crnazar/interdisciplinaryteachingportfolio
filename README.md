@@ -30,7 +30,16 @@ The pages are plain HTML/CSS with no build step required to view. They were gene
 from a single Python script so the shared navigation, header, and footer stay
 consistent across pages.
 
-## Deployment
+## Deployment (GitHub Pages)
 
-`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to the
-project branch (and `main`). The workflow auto-enables Pages the first time it runs.
+This is a plain static site, so GitHub can serve it directly from the branch — no build
+step. To turn it on (one time):
+
+1. Go to **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. Set **Branch** to `claude/portfolio-github-pages-02kn7x` and the folder to **`/ (root)`**, then **Save**.
+
+The site publishes at
+https://crnazar.github.io/interdisciplinaryteachingportfolio/ within a minute or two,
+and rebuilds automatically on every push. The `.nojekyll` file tells Pages to serve the
+files as-is.
